@@ -1,4 +1,4 @@
-var Tooltip =(function(){
+(function(){
 	"use strict";
 
 	function Tooltip() {}
@@ -24,14 +24,14 @@ var Tooltip =(function(){
 		var rel = obj.getAttribute('data-rel');
 		return document.querySelector(rel);
 	};
-	return Tooltip;
-}());
 
-var $ = function(selector) {
-	return document.querySelectorAll(selector);
-};
-window.addEventListener("load", function() {
-	var tt = new Tooltip();
-	tt.init($('.tt'));
-	tt.init($('#another'));
-});
+
+	var $ = function(selector) {
+		return document.querySelectorAll(selector);
+	};
+	window.addEventListener("load", function() {
+		var tt = new Tooltip();
+		tt.init($('.tt'));
+		tt.init($('#another'));
+	});
+}());
