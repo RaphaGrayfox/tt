@@ -19,10 +19,11 @@ function getContent(obj) {
 	var rel = obj.getAttribute('data-rel');
 	return document.querySelector(rel);
 };
-window.addEventListener("load", function() {
+function $(selector) {
+	return document.querySelectorAll(selector);
+};
+
+document.addEventListener("DOMContentLoaded", function() {
 	init($('.tt'));
 	init($('#another'));
 });
-var $ = function(selector) {
-	return document.querySelectorAll(selector);
-};

@@ -22,11 +22,12 @@
 		var rel = obj.getAttribute('data-rel');
 		return document.querySelector(rel);
 	};
-	window.addEventListener("load", function() {
-		tt.init($('.tt'));
-		tt.init($('#another'));
-	});
 	var $ = function(selector) {
 		return document.querySelectorAll(selector);
 	};
+
+	document.addEventListener("DOMContentLoaded", function() {
+		tt.init($('.tt'));
+		tt.init($('#another'));
+	});
 }());

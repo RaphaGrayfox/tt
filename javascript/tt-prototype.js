@@ -29,7 +29,7 @@
 	var $ = function(selector) {
 		return document.querySelectorAll(selector);
 	};
-	window.addEventListener("load", function() {
+	document.addEventListener("DOMContentLoaded", function() {
 		var tt = new Tooltip();
 		tt.init($('.tt'));
 		tt.init($('#another'));
